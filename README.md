@@ -27,12 +27,15 @@ Understanding C++ is critical for system-level programming and secure software d
 
 ## Instructions
 
-## Run Online
-You can run and test this code directly in your browser using the Programiz online compiler:  
-[Run on Programiz](https://www.programiz.com/online-compiler/1BTYJoHZfFvJo)
-
 Clone the repository and compile the code using a C++ compiler:
 
 ```bash
 g++ CS115_IP5_LuisCamachoJr.cpp -o output
 ./output
+```
+
+## Run Online
+
+You can run and test this code directly in your browser using the Programiz online compiler:
+
+[Run on Programiz](https://www.programiz.com/online-compiler/11UkcadNsRTm8)
