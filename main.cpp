@@ -5,7 +5,8 @@
 // Course#     : CS115-1601A-01
 // Course      : Programming with C++
 // Instructor  : Instructor Charles Hale
-// Version     : Week 5 Feburary 08, 2016 5
+// Version     : Week 5 - 5
+// Last updated: January 2025
 // Copyright   : Educational Purposes
 // Description : C++, Ansi-style Successful Compile, Run, and updated application with objects, classes, functions, pointers
 //============================================================================
