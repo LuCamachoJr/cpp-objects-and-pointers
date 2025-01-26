@@ -9,9 +9,16 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #001f3f;
             color: #cdd3de;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
         }
         h1, h2 {
             color: #00c6ff;
@@ -23,23 +30,23 @@
         a:hover {
             text-decoration: underline;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .graphic {
-            margin: 20px 0;
-        }
-        .graphic img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
         ul {
             text-align: left;
             padding-left: 20px;
+        }
+        .graphic img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        @media (max-width: 768px) {
+            h1, h2 {
+                font-size: 1.5em;
+            }
+            .graphic img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -73,7 +80,7 @@
         </div>
 
         <h2>How to Run the Code</h2>
-        <p>To compile and run the code locally, use the following commands:</p>
+        <p>Clone the repository and compile the code using a C++ compiler:</p>
         <pre>
             g++ CS115_IP5_LuisCamachoJr.cpp -o output
             ./output
