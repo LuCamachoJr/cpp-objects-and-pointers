@@ -24,7 +24,7 @@ Understanding C++ is critical for system-level programming and secure software d
 - **Course**: Programming with C++
 - **Instructor**: Charles Hale
 - **Completion Date**: February 8, 2016
-- - **Last Updated**: January 28, 2025
+- **Last Updated**: January 28, 2025
 - **Updates**:
   - Enhanced input validation for secure user data collection
   - Implemented error logging for auditing purposes
