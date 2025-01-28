@@ -11,11 +11,11 @@ This repository showcases a C++ project developed as part of my coursework at Co
 - Dynamic memory management
 
 ## Relevance to Cybersecurity
-
 Understanding C++ is critical for system-level programming and secure software development, forming the backbone of many cybersecurity tools and techniques. This project demonstrates:
-
 - Core programming skills necessary for secure software development
 - Insights into memory management, a critical factor in preventing buffer overflows
+- Input validation to prevent improper user input and potential vulnerabilities
+- Error logging for auditing and tracking invalid inputs, aligning with secure coding practices
 - Practical problem-solving with structured programming approaches
 
 ## Key Details
@@ -24,6 +24,10 @@ Understanding C++ is critical for system-level programming and secure software d
 - **Course**: Programming with C++
 - **Instructor**: Charles Hale
 - **Completion Date**: February 8, 2016
+- - **Last Updated**: January 28, 2025
+- **Updates**:
+  - Enhanced input validation for secure user data collection
+  - Implemented error logging for auditing purposes
 
 ## Instructions
 
