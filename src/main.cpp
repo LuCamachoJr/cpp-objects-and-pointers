@@ -5,10 +5,10 @@
 // Course#     : CS115-1601A-01
 // Course      : Programming with C++
 // Instructor  : Instructor Charles Hale
-// Version     : Week 5 - 5
-// Last updated: January 2025
+// Version     : Week 5 February 08, 2016
+// Last updated: January 28, 2025
 // Copyright   : Educational Purposes
-// Description : C++, Ansi-style Successful Compile, Run, and updated application with objects, classes, functions, pointers
+// Description : C++, Ansi-style Successful Compile, Run, and updated application with objects, classes, functions, pointers, input validation, error logging
 //============================================================================
 
 #include <iostream>
@@ -40,20 +40,23 @@ class StoredCustomerData {
 public:
 
     void setCustomerFirstName() {
+        // Display the opening statement once
+        cout << "Welcome to Fix All Systems Inc." << endl;
+        cout << "*******************************" << endl;
+        cout << "Create your Customer Account for faster check-out and SAVINGS!!!" << endl;
+        cout << "*******************************" << endl;
+
         while (true) {
-            cout << "Fix All Systems Inc." << endl;
-            cout << "*******************************" << endl;
-            cout << "Create your Customer Account for faster check-out and SAVINGS!!!" << endl;
-            cout << "*******************************" << endl;
+            // Prompt for first name
             cout << "Enter your First Name: ";
             cin >> customerFirstName;
 
             // Validate input
             if (validateInput(customerFirstName, "^[A-Za-z]{1,50}$")) {
-                break;
+                break; // Exit the loop if input is valid
             } else {
                 string errorMsg = "Invalid first name: " + customerFirstName;
-                logError(errorMsg);
+                logError(errorMsg); // Log the error
                 cout << "Invalid input. Please try again." << endl;
             }
         }
@@ -66,7 +69,7 @@ public:
 
             // Validate input
             if (validateInput(customerLastName, "^[A-Za-z]{1,50}$")) {
-                break;
+                break; // Exit the loop if input is valid
             } else {
                 string errorMsg = "Invalid last name: " + customerLastName;
                 logError(errorMsg);
@@ -82,7 +85,7 @@ public:
 
             // Validate input
             if (validateInput(zipCode, "^\\d{5}$")) {
-                break;
+                break; // Exit the loop if input is valid
             } else {
                 string errorMsg = "Invalid zip code: " + zipCode;
                 logError(errorMsg);
@@ -183,16 +186,33 @@ int main() {
     cout << "Welcome to the Customer Information Program!" << endl;
     cout << "Please enter the requested details below." << endl;
 
-    StoredCustomerData customerData;
+    StoredCustomerData* customerData = new StoredCustomerData();
 
     // Collect and validate user input
-    customerData.setCustomerFirstName();
-    customerData.setCustomerLastName();
-    customerData.setZipCode();
+    customerData->setCustomerFirstName();
+    customerData->setCustomerLastName();
+    customerData->setZipCode();
+
+    // Display newly created customer account and use object
+    // to get values from private variables in the class.
+    // Accessing member class "StoredCustomerData" using the member access operator (->) to retrieve stored data in memory.
+    cout << "Your new Customer Account has been created:" << endl;
+
+    // Utilize the reference operator to display the memory address for the customer account number
+    cout << "Account Number: " << customerData << endl;
+
+    // Display the full customer information using getter methods
+    cout << "Welcome " << customerData->getCustomerFirstName() << " " << customerData->getCustomerLastName() << endl;
+    cout << "From ZIP Code: " << customerData->getZipCode() << endl;
+    cout << "*******************************" << endl;
+    cout << "*******************************" << endl;
 
     // Create and display the service list
     ServiceList services;
     services.displayServiceList();
+
+    // Free allocated memory
+    delete customerData;
 
     return 0;
 }
