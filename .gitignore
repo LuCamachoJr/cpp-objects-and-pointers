@@ -1,0 +1,15 @@
+# Ignore the .idea folder
+.idea/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore compiled files
+*.o
+*.out
+*.exe
+
+# Ignore system files
+.DS_Store
+Thumbs.db
