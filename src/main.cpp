@@ -8,7 +8,7 @@
 // Version     : Week 5 February 08, 2016
 // Last updated: January 28, 2025
 // Copyright   : Educational Purposes
-// Description : C++, Ansi-style Successful Compile, Run, and updated application with objects, classes, functions, pointers, input validation, error logging
+// Description : C++, Ansi-style Successful Compile, Run, and updated application with objects, classes, functions, pointers, input validation, error logging 
 //============================================================================
 
 #include <iostream>
